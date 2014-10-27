@@ -22,17 +22,17 @@ You can also type **man <command>** and a manual page will tell you
 what the command does.
 
 First thing's first: open up a terminal and run
-******sh
+```sh
 $ cd
-******
+```
 cd means change directory.  This will make sure that you're in your 
 home (~) directory.  You can always
 run **cd** without any arguments to be taken back to your home directory!
 
 Next, type
-******sh
+```sh
 $ ls
-******
+```
 
 ls means list the files in the directory.  You can also do **ls -a** to show
 dot files, and **ls -l** to get more information about the files in your 
@@ -43,24 +43,24 @@ See if you can list all the files in your root directory (/), and the
 date they were last edited.
 
 You can create empty files using the **touch** command.
-******sh
+```sh
 $ touch testing.txt
-******
+```
 You can name the file whatever you'd like **as long as it doesn't have spaces**, testing is just an example. 
 Alternatively, you can open a file with your favorite text editor, and
 then just save it to create the file. 
 
 To rename a file or directory, or move it to a different directory, 
 you use the mv command.  
-******sh
+```sh
 $ mv testing.txt not-testing.txt
-******
+```
 The first argument you pass it is the file you're moving, and the second
 is where you're moving it to.  You can also move the same file to a 
 new directory.
-******sh
+```sh
 $ mv not-testing.txt ./Downloads/
-******
+```
 Try creating a file named 'myfile.fileextension', moving it to a different
 directory, and renaming it to 'mynewfile.filesyay'
 
