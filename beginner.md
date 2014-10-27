@@ -78,14 +78,14 @@ To concatenate files and print them to your terminal, use **cat**
 $ cat <myawesomefile>
 ```
 
-To print the path of the directory you're currently in, us **pwd** (means
+To print the path of the directory you're currently in, use **pwd** (means
 print working directory)
 ```sh
 $ pwd
 ```
 Try printing your current directory, changing directories, and printing again.
 
-To remove files or directories use **rm*
+To remove files or directories use **rm**
 ```sh
 $ rm <myawesomefile>
 ```
