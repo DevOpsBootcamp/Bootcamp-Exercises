@@ -1,4 +1,4 @@
-Steam Locamotive
+Steam Locomotive
 ================
 Do this if you know about the following:
 * Basic file commands like `mv`, `cp`, etc.
@@ -6,11 +6,11 @@ Do this if you know about the following:
 * How to pass a command options and arguments
 * What a man page is
 * How to use `nano` or `vim`
-* Are somewhat familar with `git`
+* Are somewhat familiar with `git`
 
 When you are typing you often make typos. It is easy to flip the letters in
 `ls` and type `sl` by accident. There is a charming program called `sl` to
-break you of this habit. Running `sl` shows a steam locamotive zipping accross
+break you of this habit. Running `sl` shows a steam locomotive zipping across
 your terminal. We are going to download and compile `sl`.
 
 First, visit the github repository in your browser:
@@ -65,8 +65,6 @@ The `./` at the beginning is the path to the file. Remember, `.` is the current
 directory, and `/` is the separator between files and directories.
 If you go to another directory (try `cd ~`), how can you run `sl`?
 
-In order to execute a file, you need the right permissions. Run `ls -l`
-
 
 `sl` is a command just like any other command. For example, take a look at
 `echo`. 
@@ -105,7 +103,7 @@ $ cp /usr/share/man/man1/echo.1.gz . # remember . is the current directory
 Now try unzipping the file you just copied:
 
 ```sh
-$ gunzip /usr/share/man/man1/echo.1.gz
+$ gunzip echo.1.gz
 ```
 You should get a file like `echo.1`. Try opening it with `nano`. It still looks
 kind of funny, but now you can read parts of the man page. That's because `man`
@@ -177,17 +175,17 @@ $ SOMEVAR="some string" # notice there is no $ before SOMEVAR!
 You'll see a bunch of directories separated by `:` characters. These are the
 directories your shell searches to find commands. To be able to use the `sl`
 command from anywhere, we need to put it in one of these directories. Typically
-binary files go in `/bin`, which stands for binaries. Let's try moving `sl`
+binary files go in `/usr/local/bin`, which stands for binaries. Let's try moving `sl`
 there:
 
 ```sh
-$ mv sl /bin
+$ mv sl /usr/local/bin
 ```
 Permissions again. Let's see who owns `/bin`. It looks like root is the owner.
 It turns out there is a command to run a command as root called `sudo`.
 `sudo` stands for super-user-do, since root is the super user. It executes
 whatever command comes afterwards as root.
 ```sh
-$ sudo mv sl /bin
+$ sudo mv sl /usr/local/bin
 ```
 Now you can run sl from anywhere without typing the full path.
