@@ -170,7 +170,7 @@ grep
 To search through a file or directory for a string, use `grep`
 
 ```sh
-$ grep <string you're looking for> <file or directory you're looking in>
+$ grep <string you are looking for> <file or directory you are looking in>
 ```
 
 By default `grep` only looks at the files in the directory you pass it --
@@ -179,7 +179,7 @@ you need to pass it `-r` for recursive. A common idiom is to combine this
 with `-i` (case insensitive searching).
 
 ```sh 
-$ grep -ir <string you're looking for> <directory you're looking in>
+$ grep -ir <string you are looking for> <directory you are looking in>
 ```
 
 apropos
