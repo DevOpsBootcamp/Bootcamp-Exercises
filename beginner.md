@@ -65,7 +65,7 @@ $ touch testing.txt
 
 You can name the file whatever you'd like; testing is just an example.
 
-Note: `touch` will create a file for each argument you pass it, so
+**Note**: `touch` will create a file for each argument you pass it, so
 
 ```sh
 $ touch file1 file2
@@ -196,7 +196,7 @@ apropos(1), whatis(1)   - keyword search whatis documentation databases
 
 Some keywords will return an awful lot of manpages.
 
-Note: `apropos` does a search for each argument individually. This means
+**Note**: `apropos` does a search for each argument individually. This means
 that:
 
 ```sh
