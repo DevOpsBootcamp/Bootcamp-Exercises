@@ -47,6 +47,37 @@ $ git push origin <your branch name>
 Now, if you go to github and click on the branches dropdown menu, you 
 should see your branch in the list!
 
-Next we'll go over making a pull request.  
+You should now have a fork of the repository in your own account 
+(github.com/<your username>/Students), and be on a branch named after you. 
+Ask one of us for help if you aren't sure if you did it right!
+
+Next we'll go over making a pull request.  Go back to 
+https://github.com/DevOpsBootcamp/Students.  There will likely be a 
+bar across the top of the page saying "<branch name> (a few minutes ago)" 
+with a large "Compare & pull request" button on the left.  Go ahead 
+and click the button.  If that doesn't show up, then go to
+the 'pull requests' link on the right hand side menu (it's the third
+item down).  
+
+This should take you to a page with some nice information on it.  At 
+the very top of the page, right below the name of the account and repo,
+you can see the two branches you're comparing -- yours, and the master
+branch of our repository.  Below that is the name of your pull request
+(you can change it!) and any comments you have.  Just like with 
+commit messages, you want to be as clear as possible about what you're
+doing! Make sure you have a brief summary in the title section, and 
+more details about what you did in the comments.  Then, on the right,
+you'll see if you are able to merge the branch -- in this case, you should
+be able to!  Once you've filled out the form, you can click 'Create
+Pull Request' to submit the pull request!
+
+Below all of that are the details of what you changed -- you can see
+all of the files you changed, as well as the specific line-by-line
+changes that you made.  It's not a bad idea to skim through these and 
+make sure that everything looks correct!  
+
+Now, you will wait for your pull request to be pulled into the repo 
+by the owners (in this case, that's us!).  We can also make comments
+on the pull request, 
 
 
