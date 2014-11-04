@@ -25,7 +25,7 @@ asterisk by master indicates that you are still on the master branch.
 To go to your new branch, run
 
 ```sh
-$git checkout <branch name>
+$ git checkout <branch name>
 ```
 
 Now you're on your very own branch!  
@@ -88,6 +88,27 @@ make sure that everything looks correct!
 
 Now, you will wait for your pull request to be pulled into the repo 
 by the owners (in this case, that's us!).  We can also make comments
-on the pull request, 
+on the pull request, and even add other commits!  Let's try it!
+
+If you head over the the pull requests link in the sidebar (if you aren't
+already there), and click on your pull request, you'll see a space towards the bottom of the page to make comments.  Go ahead and type something
+out to leave a comment ("Hi, I like elephants" or "Double-chocolate
+brownies are awesome" or a cat gif are acceptable comments).  
+
+If you refresh the page, you'll see your comment on the PR!  
+
+Now, head back to your terminal, and use git status to make sure
+you are still on the branch that you created.  Open up your 
+file and change something about it -- maybe add a line, delete a line,
+add your middle name, whatever floats your boat.  Save and close the
+file, then push your file with it's changes to the same branch 
+(git add, git commit, git push origin <branch>).  
+
+If you go back to the pull request on our repository, you should see 
+your new commit in the pull request!  You can click on it to see
+changes you made in more detail.  Pretty neat!   
+
+Now, dedicated DevOps attendees, you are enlightened Github users!  Go
+forth and submit PRs!  
 
 
