@@ -38,7 +38,7 @@ $ vim <your name>.txt
 
 and then add some data about yourself
 
-pp```sh
+```sh
 Name: Lucy Wyman
 Year and major: Sophomore in Computer Science
 What you hope to learn at Bootcamp: 
