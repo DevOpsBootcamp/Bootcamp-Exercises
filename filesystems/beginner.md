@@ -48,7 +48,7 @@ Now lets associate the file we made with `/dev/loop0`, format it with a
 file system and mount it:
 
 ```bash
-$ sudo losetup /dev/loop0 ~/vagrant_file
+$ sudo losetup /dev/loop0 ~/mount_file
 $ sudo mkfs.ext4 /dev/loop0 # only needs to be run once!
 $ sudo mount -t ext4 /dev/loop0 /mnt
 $ mount # lists devices that are mounted
