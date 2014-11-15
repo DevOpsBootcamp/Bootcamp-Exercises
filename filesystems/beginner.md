@@ -49,7 +49,7 @@ file system and mount it:
 
 ```bash
 $ sudo losetup /dev/loop0 ~/vagrant_file
-$ sudo mkfs.ext4 /dev/loop0
+$ sudo mkfs.ext4 /dev/loop0 # only needs to be run once!
 $ sudo mount -t ext4 /dev/loop0 /mnt
 $ mount # lists devices that are mounted
 /dev/mapper/VolGroup-lv_root on / type ext4 (rw)
@@ -61,7 +61,34 @@ tmpfs on /dev/shm type tmpfs (rw,rootcontext="system_u:object_r:tmpfs_t:s0")
 none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
 vagrant on /vagrant type vboxsf (uid=500,gid=500,rw)
 /dev/loop0 on /mnt type ext4 (rw)
+
+$ umount /mnt # unmount our loop device
+$ losetup -d /dev/loop0 # disassociate loop device from file
 ```
 
 Congratulations, you have made a file, associated it with a loop device,
 formatted it with a filesystem, and mounted it!
+
+When you want to mount a loop device in the future, you can combine the
+`losetup` and the `mount` commands into one:
+
+```bash
+$ sudo mount -o loop -t ext4 ~/mount_file /mnt
+```
+
+You can check that `mount` automatically ran `losetup` for you with:
+
+```bash
+$ sudo losetup -a
+/dev/loop0: [fd00]:1836453 (/home/vagrant/mount_file)
+```
+
+Mount will also know to automatically disassociate the loop device for you as well:
+
+```bash
+$ sudo umount /mnt
+$ sudo losetup -a
+```
+
+If `losetup -a` returns no output, it means there are no loop devices
+that are associated with a file.
