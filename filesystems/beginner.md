@@ -62,8 +62,8 @@ none on /proc/sys/fs/binfmt_misc type binfmt_misc (rw)
 vagrant on /vagrant type vboxsf (uid=500,gid=500,rw)
 /dev/loop0 on /mnt type ext4 (rw)
 
-$ umount /mnt # unmount our loop device
-$ losetup -d /dev/loop0 # disassociate loop device from file
+$ sudo umount /mnt # unmount our loop device
+$ sudo losetup -d /dev/loop0 # disassociate loop device from file
 ```
 
 Congratulations, you have made a file, associated it with a loop device,
