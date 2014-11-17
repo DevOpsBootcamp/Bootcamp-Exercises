@@ -2,12 +2,15 @@ Navigating Filesystems
 ======================
 
 In this exercise you will create two files, `foo` and `bar`, and a directory
-called `baz`. `bar` should be created with your text editor and have a *secret*
-message inside.
+called `baz`.
 
 These files will be owned by `root` because we are going to make them with
 `sudo touch <file>` and `sudo <editor> <file>`. Sudo means you are running a 
 single command as the `root` user.
+
+`bar` should be created with your text editor and have a *secret* message
+inside. Open the new file in vim and enter some unique text such as 'Devops
+is so cool!' or 'I am learning about filestructuresi!'
 
 ```bash
 [vagrant@devops-bootcamp ~]$ sudo touch foo
