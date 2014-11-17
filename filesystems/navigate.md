@@ -24,10 +24,11 @@ drw-r--r--. 1 root root 4096 Nov 15 00:23 baz
 ```
 
 Now we want to edit one of these files, but because we are not the owner we are
-not given pemission to do so. To edit `bar` we need to run the `chown` command.
+not given permission to do so. To edit `bar` we need to run the `chown` command.
 
-This command is structured `sudo chown $USER:$GROUP <file>` and `sudo chown -R
-$USER:$GROUP <directory>` for directories.
+This command is structured `sudo chown $USER:$GROUP <file/dir>` and `sudo chown
+-R $USER:$GROUP <directory>` to change the owner of directory's *and* all of
+the directories contents.
 
 ```bash
 [vagrant@devops-bootcamp ~]$ chown vagrant:vagrant bar
@@ -42,8 +43,9 @@ drwxr-xr-x. 2 root    root    4096 Nov 15 00:35 baz
 
 Now that we own the file we can do anything with it, without having to run
 `sudo`. We are going to change the permissions so everybody can read/write/
-execute the file. The abstract command is `chmod <permissions> <file>` and
-`chmod -R <permissions> <directory>` for a directory.
+execute the file. The abstract command is `chmod <permissions> <file/dir>` and
+`chmod -R <permissions> <directory>` to change the ownership of directories
+*and* all of it the directory's contents.
 
 ```bash
 [vagrant@devops-bootcamp ~]$ chmod 777 bar
@@ -72,6 +74,9 @@ cat: bar: Permission denied
 By passing `000` as the permissions for `bar` in the `chmod` command we have
 set it so nobody can interact with the file... unless we change the permissions
 again.
+
+If you did not get the error message `cat: bar: Permission denied` you are
+probably running the command as root-- Stop that! You are ruining the guide! :)
 
 ```bash
 [vagrant@devops-bootcamp ~]$ chmod 700 bar
