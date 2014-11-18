@@ -92,8 +92,24 @@ A secret message!
 Now we are the only people that can see our secret message! This is because we
 set the mode from NOBODY READ/WRITE/EXECUTE to OWNER READ/WRITE/EXECUTE.
 
+`ugoa` stands for `User, Group, Other, and All`. This is simply a different
+format for adding and removing permissions to a file. you can allow (`+`) or
+disallow (`-`) either the User (owner), the Group, Other, or All users from
+(r)eading, (w)riting, and e(x)ecuting a file. For example
+
+```bash
+[vagrant@devops-bootcamp ~]$ sudo chown a-x foo
+# This disallows all users from executing a file
+[vagrant@devops-bootcamp ~]$ sudo chown g+w foo
+# This allows everybody in a files group to write to it
+[vagrant@devops-bootcamp ~]$ sudo chown o-r foo
+# This prevents users who are not the owner or in the group of a file from
+editing it.
+```
+
 Our next task is to make the file `foo` editable by everybody without owning it.
 Instead of using the ### method with `chmod` we will use the `ugoa` controls.
+
 
 ```bash
 [vagrant@devops-bootcamp ~]$ sudo chown a+w foo
@@ -130,6 +146,9 @@ What we have done here is move `foo` to the `baz` directory, then removed the
 execute permission for (a)ll users, re-added the execute permission for the 
 owner `root`. When we try to ls the `baz` directory we are not able to see
 its contents correctly because we do not have permission to do so.
+
+Removing the e(x)ecute permission for a directory prevents affected users from 
+accessing a directory with commands like `cd` and `ls`.
 
 If you have any questions look at the `man` pages for each of the topics
 covered or search their common usage online.
