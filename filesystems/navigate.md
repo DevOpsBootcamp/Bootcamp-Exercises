@@ -98,11 +98,11 @@ disallow (`-`) either the User (owner), the Group, Other, or All users from
 (r)eading, (w)riting, and e(x)ecuting a file. For example
 
 ```bash
-[vagrant@devops-bootcamp ~]$ sudo chown a-x foo
+[vagrant@devops-bootcamp ~]$ sudo chmod a-x foo
 # This disallows all users from executing a file
-[vagrant@devops-bootcamp ~]$ sudo chown g+w foo
+[vagrant@devops-bootcamp ~]$ sudo chmod g+w foo
 # This allows everybody in a files group to write to it
-[vagrant@devops-bootcamp ~]$ sudo chown o-r foo
+[vagrant@devops-bootcamp ~]$ sudo chmod o-r foo
 # This prevents users who are not the owner or in the group of a file from
 editing it.
 ```
@@ -112,7 +112,7 @@ Instead of using the ### method with `chmod` we will use the `ugoa` controls.
 
 
 ```bash
-[vagrant@devops-bootcamp ~]$ sudo chown a+w foo
+[vagrant@devops-bootcamp ~]$ sudo chmod a+w foo
 [vagrant@devops-bootcamp ~]$ ls -l
 total 8
 -rwx------. 1 vagrant vagrant   25 Nov 15 00:48 bar
