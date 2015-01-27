@@ -30,7 +30,11 @@ last modified? Use `ls` and an option.
 Next, compile the program using make.
 ```sh
 $ make
+# If you encounter an error from the `make` command use your package manager
+# to install the ncurses library
+$ yum install ncurses-devel ncurses-libs
 ```
+
 Make runs a series of commands to compile a program. If your program is very
 large and there is a lot of code you can optionally include having a good 
 Makefile is important.
