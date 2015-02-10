@@ -36,7 +36,7 @@ super important.
 The specific command we want to run is called `tshark`. Run the following:
 
 ```bash
-$ sudo tshark -i eth0 -O udp -R dns port 53
+$ sudo tshark -i eth0 -R dns port 53
 ```
 
 This will initially give output like the following:
