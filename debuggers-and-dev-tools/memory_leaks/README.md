@@ -109,7 +109,7 @@ It happens on line 26 of `ast.c`:
 
 Okay, let's run fire up gdb and see what happens on that line.
 
-```sh
+```
 $ gdb ./ast_tests
 (gdb) break ast.c:26
 Breakpoint 1 at 0x40186e: file ast.c, line 26.
@@ -119,7 +119,7 @@ Breakpoint 1, append_child (node=0x6021c0, val=0x602140) at ast.c:26
 ```
 We can print the fields of the node struct. First, lets check that `node->children` isn't
 NULL, or something similarly silly, and then lets check that the number of children is less than the capacity of children.
-```sh
+```
 (gdb) print node->children
 $1 = (struct ast_node **) 0x602070
 (gdb) print node->num_children
@@ -135,7 +135,7 @@ Continuing.
 We hit the breakpoint and continue a few more times before the program explodes in our face.
 Okay then, that didn't pan out. Let's see what other lines might screw up our program's
 memory, maybe, that realloc line we were looking at earlier:
-```sh
+```
 (gdb) break ast.c:24
 Breakpoint 1 at 0x401844: file ast.c, line 24.
 (gdb) print node->num_children
@@ -147,9 +147,9 @@ The first argument was our pointer, which seems fine, and the second argument wa
 the number of bytes we want to allocate. We want to double our allocation so we put
 twice our number of children, which is four bytes.
 Wait, how big is a single child node?
-```sh
+```
 (gdb) print sizeof(struct ast_node*)
-$5 = 32
+$5 = 8
 ```
 This looks like a problem. We want enough space for four pointers to our nodes, which are each
 8 bytes long. We allocated 4 bytes total, not even enough for one node.
@@ -170,7 +170,7 @@ It looks like we just halved the number of errors!
 
 Well, our last error was from allocating the wrong amount of space
 using realloc. Let's look at what our malloc  line does:
-```sh
+```c
     new_node->children = malloc(sizeof(struct ast_node*) * num_children);
 ```
 Everything seems to be in order, we're making an array of ast_nodes which
@@ -180,7 +180,7 @@ We resize our allocation when we run out of capacity for children pointers.
 We allocate enough space for the number of children we're given, and set our
 capacity to be two more than that. Wait a minute, we don't allocate enough space.
 We need to allocate two extra slots:
-```sh
+```c
     new_node->children = malloc(sizeof(struct ast_node*) * (num_children + 2));
 ```
 
