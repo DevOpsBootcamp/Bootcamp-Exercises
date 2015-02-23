@@ -8,7 +8,7 @@ struct ast_node* make_node(struct token *val, size_t num_children, ...) {
     new_node->num_children = num_children;
     // pointers are small, so allocating extra space is cheap
     new_node->children_cap = num_children + 2;
-    new_node->children = malloc(sizeof(struct ast_node) * num_children);
+    new_node->children = malloc(sizeof(struct ast_node*) * num_children);
     va_list children;
     va_start(children, num_children);
     for (size_t i = 0; i < num_children; i++) {
