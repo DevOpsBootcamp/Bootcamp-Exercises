@@ -32,5 +32,5 @@ Interview Questions:
 6. Describe, in as much detail as you can, what happens when you go visit a website (what steps does the browser go through to display the page?).
 7. Write the code to control an elevator.
 8. What's the difference between TCP and UDP? When would you want to use one over the other? 
-9. Implement two algorithms that are O(nlogn).  When would you use both of the algorithms? Discuss their advantages and disadvantages.
-10.
+9. Implement two algorithms that are O(nlogn) sorting alogrithms.  When would you use both of the algorithms? Discuss their advantages and disadvantages.
+
