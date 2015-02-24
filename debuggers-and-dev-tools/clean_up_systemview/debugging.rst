@@ -24,9 +24,10 @@ and try running the application again
 Oh no!  We get a 500 Internal Server Error!  Basically, something
 with the backend of our application (the systemview.py file)
 is broken (and we've turned debugging off so flask won't 
-tell us what it is).  This is where pdb comes in handy!  
+tell us what it is).  This is where PDB, the Python Debugger comes in handy!
 
-Uncomment :code:`pdb.set_trace()` on line 185 in systemview.py, and try running the application again.
+Uncomment :code:`pdb.set_trace()` on line 185 in systemview.py, and try running
+the application again.
 This time, you'll be dropped into a debugging repl (read-eval-print-loop).
 This is the python debugger!  From here we can run commands such
 as :code:`where` to print the stack trace, :code:`break [line no]`
@@ -43,7 +44,7 @@ about the Search class to see what's going on.  First we'll try
 
     (Pdb) print Search
 
-which just tells us that the search class is in the main function, 
+which just tells us that the search class is in the main module,
 which isn't very helpful.  But let's try looking at the query
 that Search is making:
 
