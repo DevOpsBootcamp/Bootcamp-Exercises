@@ -9,11 +9,12 @@ to start is usually to try setting up or installing the project -- did you run i
 or find something that could be more clear?  Make an edit to the documentation, and boom, you've
 got a contribution!  A quick reminder of the steps to contributing:
 
-1. Fork the project using git fork
-2. Checkout a new branch with your username in the title
-3. Open an issue on the main project -- see if they'd be open to taking a pull request to fix it!
-4. Make your changes and push them to your new branch.
-5. Make a pull request into the main project from your fork.
-6. If they need you to change more things, just push to your branch and it will show up on 
+1. Fork the project using the fork button on github.
+2. Clone the fork on your computer.
+3. Checkout a new branch with your username in the title
+4. Open an issue on the main project -- see if they'd be open to taking a pull request to fix it!
+5. Make your changes and push them to your new branch.
+6. Make a pull request into the main project from your fork.
+7. If they need you to change more things, just push to your branch and it will show up on 
 the pull request, no fancy changes necessary!
 
