@@ -28,8 +28,8 @@ commands in the `DevOps BootCamp Vagrant Machine`_:
 .. code::
 
     $ sudo su
-    # rpm -iUvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-    # yum update -y
+    # wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    # rpm -ivh epel-release-6-8.noarch.rpm
     # yum -y install docker-io
     # service docker start
     # chkconfig docker on

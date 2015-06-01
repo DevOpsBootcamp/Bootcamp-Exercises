@@ -59,6 +59,16 @@ commands to create and enter a virtual environment.
     $ source venv/bin/activate
     $ pip install pytest
 
+**NOTE:** If you do not yet have virtualenv installed, run the following
+commands to get it installed. You will need to run the previous commands once
+the correct programs have been installed.
+
+.. code::
+
+    $ wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    $ sudo rpm -ivh epel-release-6-8.noarch.rpm
+    $ sudo yum install -y python-pip python-virtualenv
+
 The adder directory needs to contain the following files: `__init__.py`,
 `lib.py`, and `tests.py`. `__init__.py` and `tests.py` are both empty, so you
 can create them with the command `touch __init__.py tests.py`. `lib.py` should
