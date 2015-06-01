@@ -58,3 +58,7 @@ To this:
 
 * In the future, to test changes you make to a cookbook, you'll want
   to use :code:`kitchen converge`.
+* You can find a finished cookbook for systemview `here <https://github.com/DevOpsBootcamp/deploy-systemview>`_
+* For documentation and more help getting started with test kitchen,
+  the tool you'll use to develop your cookbook, check out 
+  `kitchen.ci <http://kitchen.ci/docs/getting-started/>`_
