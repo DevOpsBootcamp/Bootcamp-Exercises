@@ -41,7 +41,7 @@ To this:
 .. code-block::
 
     run_list:
-      - recipe[chefdk_getting_started]
+      - recipe[my-cookbook]
 
 * To create a virtual machine according to the chefdk getting started
   cookbook, and make sure that you've set Chef up right, run 
