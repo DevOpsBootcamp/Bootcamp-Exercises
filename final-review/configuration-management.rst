@@ -10,14 +10,18 @@ working.
    download and not through a package manager.
 * To get started on your first cookbook, you'll want to cd to the 
   directory you want your cookbook to be in, and run
-  :code:`$ chef generate cookbook my-cookbook`_.  
-* If you :code:`$ cd my-cookbook`_ and run :code:`$ ls -a`_, there 
+  :code:`chef generate cookbook my-cookbook`.  
+* If you :code:`cd my-cookbook` and run :code:`ls -a`, there 
   should be several files, including :code:`.kitchen.yml`. For 
   general cookbook development, you'd want to hit up both the RH 
   family and debian, but for now, we'll just use ubuntu. Remove the 
   line for centos
-  :code:`- name: centos-6.4`_.
-* :code:`$ kitchen list`_ should output something like this:
+  
+.. code-block:: 
+
+    - name: centos-6.4
+
+* :code:`kitchen list` should output something like this:
 
 .. code-block:: 
 
@@ -41,16 +45,16 @@ To this:
 
 * To create a virtual machine according to the chefdk getting started
   cookbook, and make sure that you've set Chef up right, run 
-  :code:`$ kitchen create all`_
+  :code:`kitchen create all`
   You can confirm it worked by
 
 .. code-block::
 
-    $ kitchen list
+    kitchen list
     Instance             Driver   Provisioner  Last Action
     default-ubuntu-1204  Vagrant  ChefSolo     Created
 
 * Notice that the instance is created now!
 
 * In the future, to test changes you make to a cookbook, you'll want
-  to use :code:`$ kitchen converge`_.
+  to use :code:`kitchen converge`.
