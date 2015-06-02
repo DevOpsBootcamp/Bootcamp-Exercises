@@ -4,7 +4,7 @@ Final Review Challenges
 Tier 1: Testing
 ---------------
 
-Check out Boocamp-Exercises/final-review/testing.rst for the Testing
+Check out BootCamp-Exercises/final-review/testing.rst for the Testing
 challenges.
 
 1. *Activity 1*:
