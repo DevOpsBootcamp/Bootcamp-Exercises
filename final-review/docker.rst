@@ -17,31 +17,32 @@ Your goal for this activity is to download a docker container, launch the
 container, and manage to get into a shell prompt within the container.
 
 **Steps:**
-1. Install `docker-io` package
+#. Install `docker-io` package
 #. Fetch a docker image
 #. Spin up a docker container
 #. Login to the docker container
 
-To install Docker you should be able to simply run the following commands shell
-commands in the `DevOps BootCamp Vagrant Machine`_:
+To install Docker you should be able to run the following commands in the
+CentOS Virtual Machine provided by `DevOps BootCamp Vagrant Machine`_:
 
 .. code::
 
     $ sudo su
-    # wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-    # rpm -ivh epel-release-6-8.noarch.rpm
-    # yum -y install docker-io
-    # service docker start
-    # chkconfig docker on
+    $ wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+    $ sudo rpm -ivh epel-release-6-8.noarch.rpm
+    $ sudo yum -y install docker-io
+    $ sudo usermod -a -G docker <username>
+    $ service docker start
+    $ chkconfig docker on
 
-Now we will download an ubuntu image to run inside of the docker image
+Now we will download an Ubuntu image to run inside of the docker image
 (distro-ception!!!)
 
 .. code::
 
     # docker pull ubuntu
 
-You may get an error when trying to pull the ubuntu image from the docker
+You may get an error when trying to pull the Ubuntu image from the docker
 servers. Wait a minute and try again, it should work fine :)
 
 Now that we have downloaded a docker image we can start to play around with it.
@@ -110,9 +111,9 @@ spun up a container of it, and logged in to look around the container.
 .. _DevOps BootCamp Vagrant Machine: https://github.com/DevOpsBootcamp/Vagrant
 
 
-Activity 2: Deploy Systeview with Docker (and a Dockerfile)
+Activity 2: Deploy Systemview with Docker (and a Dockerfile)
 -----------------------------------------------------------
-With this activity we are going to give you a little less guidence but we think
+With this activity we are going to give you a little less guidance but we think
 you can make it work!
 
 Your goal to complete this challenge is to take your newly gained Docker-Fu and

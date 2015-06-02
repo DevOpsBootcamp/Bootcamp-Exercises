@@ -1,12 +1,12 @@
 Continuous Integration Challenge Guide
 ======================================
 Now that you have (hopefully) completed the Testing review challenges we can
-move on to Continuious integration.
+move on to Continuous integration.
 
 
 Activity 0: Create a Travis CI Account (with your GH account)
 -------------------------------------------------------------
-Before we can do *anything* with Travis CI (and continuious integration as a
+Before we can do *anything* with Travis CI (and continuous integration as a
 whole) you need to sign up for a Travis CI account. This is really easy if you
 already have a GitHub account, just go to https://travis-ci.org/ and click the
 `Sign Up` button in the middle of the page.
@@ -19,7 +19,7 @@ repository and set it up for Travis CI to automatically test.
 
 **Steps:**
 
-1. Create the repository
+#. Create the repository
 #. Setup TravisCI with your application
 #. Create your python application
 #. Test your python application
@@ -27,9 +27,9 @@ repository and set it up for Travis CI to automatically test.
 
 **Create the Repository:**
 
-Begin by going to GitHub, creating a repository, and naming it
-'dobc-travis-test'. Feel free to include a README and a LICENSE, but they
-aren't strictly necessary for our purposes.
+Go to GitHub, creating a repository, and naming it 'dobc-travis-test'. Feel
+free to include a README and a LICENSE, but they aren't strictly necessary for
+our purposes.
 
 Once you have the repo follow these steps to turn on Travis CI integration: 1.
 Click on `Settings` on the bottom right above the git clone link
@@ -65,14 +65,13 @@ the correct programs have been installed.
 
 .. code::
 
-    $ wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-    $ sudo rpm -ivh epel-release-6-8.noarch.rpm
+    $ sudo yum install epel-release
     $ sudo yum install -y python-pip python-virtualenv
 
 The adder directory needs to contain the following files: `__init__.py`,
 `lib.py`, and `tests.py`. `__init__.py` and `tests.py` are both empty, so you
 can create them with the command `touch __init__.py tests.py`. `lib.py` should
-containt he following code:
+contain he following code:
 
 .. code::
 
@@ -110,18 +109,18 @@ contains the following code:
         fast_finish: true
     script: py.test adder/lib.py
 
-The above config file essentually tells Travis CI to run our test suite using
+The above config file essentially tells Travis CI to run our test suite using
 python 2.6, 2.7, and 3.4, and to run py.test adder/lib.py for our tests.
 
 Before you make a commit and `git push origin master` you can run the command
 py.test adder/lib.py just to be sure the testing infrastructure works locally.
 It's always safe to test locally before pushing a change like this.
 
-Now once you've pushed you should see a the builds automatically start on
+Now once you've pushed you should see the builds automatically start on
 Travis. If you don't you'll need to read some docs and figure out where in the
-process things fell apart. Don't worry, it usually takes a whlie for any
+process things fell apart. Don't worry, it usually takes a while for any
 project to get setup with Integration Testing, nobody gets it right on the
-frist try.
+first try.
 
 There you ahve it! Now every time you push changes to this repository your
 tests will be run automatically and GitHub will even tell you if the tests
