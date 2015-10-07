@@ -37,7 +37,54 @@ Even more of a challenge:
 #. Print your name to a file
 #. Read your name from a file
 
-If you want to keep challening yourself, check out `Project Euler`_ coding
+If you want to keep challenging yourself, check out `Project Euler`_ coding
 puzzles.
 
 .. _Project Euler: https://projecteuler.net/archives
+
+
+Next we'll look at writing python scripts. A script
+is a list of commands which can be executed
+without user interaction (though they can take user
+input!).  So when you write a python script, you're
+telling the python interpreter to "Run each of these
+commands in order, from top to bottom".  This differs
+from a compiled language, such as C.  Python scripts
+aren't inherently different from typing commands into
+the REPL, but they allow you to share your code
+with others, run the script several times, modify it
+and so on.
+
+To start writing a python script, open a file
+:code:`bootcamp.py` and add (or copy) this:
+
+.. code-block:: python
+
+    #!/usr/bin/python3
+    # This can tell your interpreter which python binary to use
+
+    print("This is your first command!")
+
+Now you can add commands to your script as if you 
+were typing them in the REPL!  
+
+Try the first exercise you did in the REPL as a script.
+
+To run your script, the incantation is:
+
+.. code-block:: none
+
+    $ python bootcamp.py
+
+Once you've successfully run the first exercise from
+the REPL as a script, here are a few more exercises to 
+try:
+
+#. Create a list (as long as you want!), then programmatically
+   find how long it is.
+#. Append a new number to the end of your list and make sure
+   your algorithm works.
+#. Define a function :code:`length()` that takes one argument
+   and finds how long it is.
+#. Define a function :code:`sum()` that will sum all the elements
+   in a list
