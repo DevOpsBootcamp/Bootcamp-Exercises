@@ -29,7 +29,7 @@ Extend the dockerfile so that it completes the following tasks:
 
 * Runs the correct ``CMD`` on startup.
 
-\* HINT: Do this step manually.
+\* HINT: Do this step manually to avoid playing the guessing game.
 
 Running The Thing
 -----------------
