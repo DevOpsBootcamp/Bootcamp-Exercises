@@ -1,13 +1,18 @@
 DOBC Docker Exercise
 ====================
 
-In this directtory there are two files:
+In this directory there are two files:
 
 * README.rst: This document
 * Dockerfile: The dockerfile specification for your container.
 
 In this exercise you will create a docker container which contains and runs the
 `tinsy-flask-app`_ we played with previously.
+
+**NOTE:** This exercise is not a trick question. If you read the README on the
+``tinsy-flask-app`` page it will basically tell you what to do, your job is to
+write a Dockerfile that accomplishes the same task as setting up and running this
+app.
 
 .. _`tinsy-flask-app`: https://github.com/DevOpsBootcamp/tinsy-flask-app
 
@@ -16,20 +21,22 @@ The Exercise
 
 Extend the dockerfile so that it completes the following tasks:
 
-* Clones https://github.com/DevOpsBootcamp/tinsy-flask-app.git into the
-  ``/root`` directory. \*
+#. Install system wide dependencies for application (``python-pip``, ``git``, etc).
 
-* Installs the dependencies needed for that application (you can install them
-  system-wide, not in a virtualenv. Bonus points for installing in a
-  virtualenv. \*
+#. Clones https://github.com/DevOpsBootcamp/tinsy-flask-app.git into the
+   ``/root`` directory.
 
-  * This will involve installing packages with ``apt`` and with ``pip``.
+#. Install app-specific dependencies
+   (``pip install -r /root/tinsy-flask-app/requirements.txt``)
 
-* Exposes the correct ports.
+#. Exposes the correct ports (Check which ports the app defaults to broadcasting on)
 
-* Runs the correct ``CMD`` on startup.
+#. Runs the correct ``CMD`` on startup (What does the ``tinsy-flask-app`` README say
+   to run to star the app?)
 
-\* HINT: Do this step manually to avoid playing the guessing game.
+**HINT:** Don't write the Dockerfile without manually running the setup commands,
+otherwise you're basically playing the guessing game ("are these the commands I
+want to run? How about these?")
 
 Running The Thing
 -----------------
