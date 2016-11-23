@@ -1,0 +1,9 @@
+HOST = '0.0.0.0'
+PORT = 8000
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/db/app.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+DEBUG = True
+
+SECRET_KEY="asdf"

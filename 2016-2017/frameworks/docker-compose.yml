@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+    app:
+        build: .
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/opt/code/
+            - ./db/:/tmp/db/
+        command: python /opt/code/run.py
+        environment:
+            - PYTHONUNBUFFERED=0

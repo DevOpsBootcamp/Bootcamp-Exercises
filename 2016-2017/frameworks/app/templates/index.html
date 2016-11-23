@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% block body %}
+    <a href="{{ url_for('create_user') }}">Create User</a></br>
+    <a href="{{ url_for('view_users') }}">View Users</a>
+{% endblock %}

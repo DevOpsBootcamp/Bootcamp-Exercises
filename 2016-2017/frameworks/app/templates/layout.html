@@ -1,0 +1,24 @@
+{# **DO NOT EDIT THIS TEMPLATE** #}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <a href="{{ url_for('index') }}">HOME</a></br></br>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% block body %}{% endblock %}
+    </body>
+</html>
