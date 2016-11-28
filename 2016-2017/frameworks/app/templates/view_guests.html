@@ -1,17 +1,18 @@
 {% extends "layout.html" %}
 
-{% block title %} View Users {% endblock %}
+{% block title %} View Guests {% endblock %}
 
 {% block body %}
     <table>
         <thead>
-            <th> User ID </th>
-            <th> User Name </th>
+            <th> Guest ID </th>
+            <th> Guest Name </th>
+            <th> Guest Message </th>
         </thead>
 
         <tbody>
             {# Use a for loop to instruct the templating engine to render rows
-             # of user data #}
+             # of guest data #}
         </tbody>
     </table>
 {% endblock %}

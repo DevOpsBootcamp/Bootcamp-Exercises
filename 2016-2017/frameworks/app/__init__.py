@@ -6,8 +6,8 @@ app.config.from_object('config')
 
 db = SQLAlchemy(app)
 
-from app.models import User
+from app.models import Guest
 
 db.create_all()
 
-from app.views import create_user, view_users
+from app.views import add_guest, view_guests

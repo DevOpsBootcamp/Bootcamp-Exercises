@@ -1,3 +1,3 @@
 import index
-import create_user
-import view_users
+import add_guest
+import view_guests
