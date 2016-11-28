@@ -1,0 +1,3 @@
+Flask == 0.11.*
+Flask-SQLAlchemy == 2.1.*
+Flask-WTF == 0.13.*
