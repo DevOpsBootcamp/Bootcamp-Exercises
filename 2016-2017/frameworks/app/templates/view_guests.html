@@ -11,8 +11,13 @@
         </thead>
 
         <tbody>
-            {# Use a for loop to instruct the templating engine to render rows
-             # of guest data #}
+            {% for guest in guests %}
+                <tr>
+                    <td> {{ guest.id }} </td>
+                    <td> {{ guest.name }} </td>
+                    <td> {{ guest.message }} </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}

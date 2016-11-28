@@ -7,10 +7,27 @@ from app.models import Guest
 from app.util import flash_form_errors
 
 
-# TODO: Add the proper methods for this route, then have this function render a
-#       template containing the AddGuestForm and handle form submissions
-@app.route('/guests/create', methods=[])
+@app.route('/guests/create', methods=['GET', 'POST'])
 def add_guest():
-    """
-    """
-    pass  # Remove this line
+    form = AddGuestForm()
+
+    if form.validate_on_submit():
+        name = form.name.data
+        message = form.message.data
+
+        guest = Guest(name, message)
+
+        try:
+            db.session.add(guest)
+            db.session.commit()
+
+        except IntegrityError as e:
+            flash('Guest with name "{}" already exists!'.format(name))
+            return redirect(url_for('add_guest'))
+
+        flash('Guest "{}" successfully added'.format(name))
+        return redirect(url_for('index'))
+
+    flash_form_errors(form)
+
+    return render_template('add_guest.html', form=form)

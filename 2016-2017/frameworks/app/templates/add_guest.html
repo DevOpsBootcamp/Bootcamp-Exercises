@@ -3,5 +3,10 @@
 {% block title %} Add Guest {% endblock %}
 
 {% block body %}
-    {# Put the AddGuestForm here #}
+    <form method="POST">
+        {{ form.csrf_token }}
+        <p>{{ form.name.label }} {{ form.name }}</p>
+        <p>{{ form.message.label }} {{ form.message }}</p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
 {% endblock %}
