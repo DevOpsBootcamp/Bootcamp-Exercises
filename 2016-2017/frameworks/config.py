@@ -1,7 +1,7 @@
 HOST = '0.0.0.0'
-PORT = 8000
+PORT = 8080
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/db/app.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/app.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 DEBUG = True
