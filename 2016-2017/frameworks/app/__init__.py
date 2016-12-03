@@ -10,4 +10,4 @@ from app.models import Guest
 
 db.create_all()
 
-from app.views import add_guest, view_guests
+from app.views import add_guest, view_guests, hello
