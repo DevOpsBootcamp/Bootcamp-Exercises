@@ -1,0 +1,17 @@
+version: '2'
+services:
+  mysql:
+    image: mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=dobc
+  dobc:
+    image: osuosl/dobc-centos
+    command: /bin/bash
+    environment:
+      - MYSQL_PORT_3306_TCP_ADDR=mysql
+      - MYSQL_PORT_3306_TCP_PORT=3306
+      - MYSQL_ENV_MYSQL_ROOT_PASSWORD=dobc
+    ports:
+      - "8080:8080"
+    links:
+      - mysql
